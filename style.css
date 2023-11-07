@@ -1,0 +1,36 @@
+.calculator {
+  display: flex;
+  flex-flow: column;
+  border: thick solid black;
+  margin-top: 50px;
+  margin-left: 200px;
+  margin-right: 200px;
+}
+
+.displays {
+  display: flex;
+  flex-direction: column;
+}
+
+#resultDisplay,
+#operationDisplay {
+  height: 70px;
+  border: thin solid black;
+  font-size: 50px;
+  padding-right: 5px;
+  display: flex;
+  justify-content: end;
+}
+
+.buttons {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.numbers,
+.operators,
+.clear,
+.res {
+  height: 25%; /* Adjust as needed */
+  width: 25%; /* Adjust as needed */
+}

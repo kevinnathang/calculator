@@ -4,24 +4,33 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="styles.css" />
   </head>
-  <br>
-    <button id="zero">0</button>
-    <button id="one">1</button>
-    <button id="two">2</button>
-    <button id="three">3</button>
-    <button id="four">4</button>
-    <button id="five">5</button>
-    <button id="six">6</button>
-    <button id="seven">7</button>
-    <button id="eight">8</button>
-    <button id="nine">9</button></br>
-    <button id="add">+</button>
-    <button id="sub">-</button>
-    <button id="div">/</button>
-    <button id="mul">x</button>
-    <button id="res">=</button>
+  <body>
+    <div class="calculator">
+      <div class="displays">
+        <div id="resultDisplay"></div>
+        <div id="operationDisplay"></div>
+      </div>
+      <div class="buttons">
+        <button class="numbers" id="one">1</button>
+        <button class="numbers" id="two">2</button>
+        <button class="numbers" id="three">3</button>
+        <button class="operators" id="add">+</button>
+        <button class="numbers" id="four">4</button>
+        <button class="numbers" id="five">5</button>
+        <button class="numbers" id="six">6</button>
+        <button class="operators" id="sub">-</button>
+        <button class="numbers" id="seven">7</button>
+        <button class="numbers" id="eight">8</button>
+        <button class="numbers" id="nine">9</button>
+        <button class="operators" id="div">/</button>
+        <button class="clear" id="clear">C</button>
+        <button class="numbers" id="zero">0</button>
+        <button class="res" id="res">=</button>
+        <button class="operators" id="mul">*</button>
+      </div>
+    </div>
     <script src="script.js"></script>
   </body>
 </html>
