@@ -5,6 +5,9 @@
   margin-top: 50px;
   margin-left: 200px;
   margin-right: 200px;
+  min-width: 100px;
+  max-width: 300px;
+  min-height: 400px;
 }
 
 .displays {
@@ -31,6 +34,10 @@
 .operators,
 .clear,
 .res {
-  height: 25%; /* Adjust as needed */
   width: 25%; /* Adjust as needed */
+}
+
+button {
+  height: 80px;
+  font-size: 40px;
 }
