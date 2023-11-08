@@ -8,6 +8,7 @@ let firstOp = "";
 let oper = "";
 let secondOp = "";
 let result = "";
+let digitQuant = 0;
 
 const add = (a, b) => a + b;
 const sub = (a, b) => a - b;
@@ -32,24 +33,31 @@ function calculate(a, b, operator) {
 const numbersBtns = document.querySelectorAll(".numbers");
 numbersBtns.forEach((btn) => {
   btn.addEventListener("click", function () {
-    if (oper === "") {
-      firstOp += this.textContent;
-      operDisplay.textContent += this.textContent;
-    } else {
-      secondOp += this.textContent;
-      operDisplay.textContent += this.textContent;
+    if (digitQuant < 12) {
+      if (oper === "") {
+        digitQuant++;
+        firstOp += this.textContent;
+        operDisplay.textContent += this.textContent;
+      } else {
+        digitQuant++;
+        secondOp += this.textContent;
+        operDisplay.textContent += this.textContent;
+      }
+      console.log(firstOp);
+      console.log(secondOp);
+      console.log(oper);
     }
-    console.log(firstOp);
-    console.log(secondOp);
-    console.log(oper);
   });
 });
 
 const operBtns = document.querySelectorAll(".operators");
 operBtns.forEach((btn) => {
   btn.addEventListener("click", function () {
-    oper = this.textContent;
-    operDisplay.textContent += this.textContent;
+    if (digitQuant < 12) {
+      digitQuant++;
+      oper = this.textContent;
+      operDisplay.textContent += this.textContent;
+    }
   });
 });
 
@@ -59,6 +67,7 @@ resBtn.addEventListener("click", function () {
   resDisplay.textContent = result;
   operDisplay.textContent = "";
   secondOp = "";
+  digitQuant = 0;
   console.log(result);
 });
 
@@ -70,4 +79,5 @@ clearBtn.addEventListener("click", function () {
   secondOp = "";
   result = "";
   oper = "";
+  digitQuant = 0;
 });
