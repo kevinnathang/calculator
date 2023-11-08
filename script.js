@@ -43,9 +43,6 @@ numbersBtns.forEach((btn) => {
         secondOp += this.textContent;
         operDisplay.textContent += this.textContent;
       }
-      console.log(firstOp);
-      console.log(secondOp);
-      console.log(oper);
     }
   });
 });
