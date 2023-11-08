@@ -63,6 +63,7 @@ operBtns.forEach((btn) => {
 
 resBtn.addEventListener("click", function () {
   result = calculate(parseFloat(firstOp), parseFloat(secondOp), oper);
+  result = result.toFixed(2);
   firstOp = result;
   resDisplay.textContent = result;
   operDisplay.textContent = "";
